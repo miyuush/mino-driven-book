@@ -35,8 +35,7 @@ RUN wget https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz && \
     rm go${GO_VERSION}.linux-amd64.tar.gz
 ENV PATH="$PATH:/usr/local/go/bin"
 
-# 
-ENV GOPATH /go
+ENV GOPATH="/go"
 ENV PATH="$PATH:$GOPATH/bin"
 RUN mkdir -p "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 
